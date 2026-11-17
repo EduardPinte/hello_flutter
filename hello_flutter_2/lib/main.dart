@@ -34,22 +34,50 @@ void main() {
           padding: const EdgeInsets.all(40),
 
           // Text afișează un șir de caractere pe ecran.
-          child: Text(
-            // ${...} pune valoarea unei expresii în text, ca în template strings din JavaScript.
-            // \n trece pe rândul următor; două \n lasă un rând gol între glumă și explicație.
-            '${joke.text}\n\n${joke.colorReason}',
+          child: Column(
+            mainAxisSize: .min,
+            spacing: 40.0,
+            children: [
+              Text(
+                // ${...} pune valoarea unei expresii în text, ca în template strings din JavaScript.
+                // \n trece pe rândul următor; două \n lasă un rând gol între glumă și explicație.
+                joke.text,
 
-            // Fără MaterialApp, trebuie să spunem noi direcția textului: de la stânga la dreapta.
-            textDirection: TextDirection.ltr,
+                // Fără MaterialApp, trebuie să spunem noi direcția textului: de la stânga la dreapta.
+                textDirection: TextDirection.ltr,
 
-            // Fiecare rând al textului este centrat.
-            textAlign: TextAlign.center,
+                // Fiecare rând al textului este centrat.
+                textAlign: TextAlign.center,
 
-            // TextStyle stabilește cum arată textul.
-            style: const TextStyle(
-              // Mărimea literelor, în pixeli.
-              fontSize: 60,
-            ),
+                // TextStyle stabilește cum arată textul.
+                style: const TextStyle(
+                  // Mărimea literelor, în pixeli.
+                  fontSize: 60,
+                ),
+              ),
+              Text(
+                // ${...} pune valoarea unei expresii în text, ca în template strings din JavaScript.
+                // \n trece pe rândul următor; două \n lasă un rând gol între glumă și explicație.
+                joke.colorReason,
+
+                // Fără MaterialApp, trebuie să spunem noi direcția textului: de la stânga la dreapta.
+                textDirection: TextDirection.ltr,
+
+                // Fiecare rând al textului este centrat.
+                textAlign: TextAlign.center,
+
+                // TextStyle stabilește cum arată textul.
+                style: const TextStyle(
+                  // Mărimea literelor, în pixeli.
+                  fontSize: 30,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              Text(
+                'World Hello',
+                textDirection: .ltr,
+              ),
+            ],
           ),
         ),
       ),

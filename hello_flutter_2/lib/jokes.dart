@@ -5,13 +5,13 @@ import 'package:flutter/painting.dart';
 ///
 /// Este un record: un grup de valori cu nume, ca un obiect JavaScript sau un record din Java.
 /// `typedef` îi dă tipului un nume scurt, Joke, pe care îl folosim în loc să-l scriem întreg.
-typedef Joke = ({String text, Color color, String colorReason});
+// typedef Joke = ({String text, Color color, String colorReason});
 
 /// Lista glumelor din aplicație, cunoscute și potrivite pentru clasă, din mai multe domenii.
 ///
 /// `const` înseamnă că lista este fixă: este creată o singură dată, la compilare, și nu se poate
 /// modifica. `List<Joke>` arată că fiecare element al listei este un Joke, ca în Java.
-const List<Joke> builtInJokes = [
+const List<({String text, Color color, String colorReason})> builtInJokes = [
   // Programare
   (
     // Textul glumei.
